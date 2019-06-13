@@ -1,0 +1,20 @@
+<!-- <select (change)="onChange($event.target.value)">
+  <option value="allBeers">All Beers</option>
+  <option value="completedBeers">Completed Beers</option>
+  <option value="incompleteBeers" selected="selected">Incomplete Beers</option>
+</select> -->
+
+<!-- <ul>
+  <li [class]="priorityColor(currentTask)" *ngFor="let currentTask of childTaskList | levels">{{currentTask.description}} {{currentTask.priority}}
+    <input *ngIf="currentTask.done === true" type="checkbox" checked (click)="toggleDone(currentTask, false)"/>
+    <input *ngIf="currentTask.done === false" type="checkbox" (click)="toggleDone(currentTask, true)"/>
+    <button (click)="editButtonClicked(currentTask)">Edit!</button>
+  </li>
+</ul> -->
+
+<ul>
+  <li [class]="abvColor(currentBeer)" *ngFor="let currentBeer of childBeerList | levels:filterByLevels">{{currentBeer.brans}}<br>{{currentBeer.name}}<br>${{currentBeer.price}}<br>{{currentBeer.abv}}% <br>{{currentBeer.flavorNotes}}
+    <input *ngIf="currentBeer.pintsRemaining <=10" type="checkbox" checked (click)="toggleDone(currentBeer, false)"/>
+    <input *ngIf="currentBeer.pintsRemaining >10" type="checkbox" (click)="toggleDone(currentBeer, true)"/>
+  <button (click)="editButtonClicked(currentBeer)">Edit!</button></li>
+</ul>
