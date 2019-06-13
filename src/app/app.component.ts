@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import { Beer } from './models/beer.model';
 
@@ -24,15 +23,21 @@ export class AppComponent {
     new Beer('Modern Times', 'Black House', 5, 5.8, 'Oatmeal Coffee'),
   ]
 
-    editBeer(beerToEdit) {
+  editBeer(beerToEdit) {
     this.selectedBeer = beerToEdit;
   }
 
   finishedEditing() {
     this.selectedBeer = null;
   }
-  
+
   addBeer(newBeer: Beer) {
-  this.masterBeerList.push(newBeer);
+    this.masterBeerList.push(newBeer);
   }
+
+  pourCompleted(beerToPour) {
+    console.log("pints??")
+    beerToPour.pintsRemaining--;
+  }
+
 }

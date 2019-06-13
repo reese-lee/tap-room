@@ -11,9 +11,15 @@ export class BeerListComponent {
 
   @Input() childBeerList: Beer[];
   @Output() clickSender = new EventEmitter();
+  @Output() clickSender2 = new EventEmitter();
 
   editButtonClicked(beerToEdit: Beer) {
     this.clickSender.emit(beerToEdit);
+  }
+
+  pourButtonClicked(beerToPour: Beer) {
+    console.log("over here?")
+    this.clickSender2.emit(beerToPour);
   }
 
   abvColor(currentBeer){

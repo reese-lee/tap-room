@@ -9,8 +9,8 @@
   <h4>{{month}}/{{day}}/{{year}}</h4>
 
   <!-- <app-new-beer (sendBeer)="addBeer($event)">></app-new-beer> -->
-  <app-beer-list [childBeerList]="masterBeerList" (clickSender)="editBeer($event)"></app-beer-list>
+  <app-beer-list [childBeerList]="masterBeerList" (clickSender)="editBeer($event)"  (clickSender2)="pourCompleted($event)" ></app-beer-list>
   <app-edit-beer [childSelectedBeer]="selectedBeer" (clickedDone)="finishedEditing()"></app-edit-beer>
-  <app-new-beer (sendBeer)="addBeer($event)"></app-new-beer>
+  <app-new-beer></app-new-beer>
 </body>
 </html>
