@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { EditBeerComponent } from './edit-beer/edit-beer.component';
 import { BeerListComponent } from './beer-list/beer-list.component';
 import { NewBeerComponent } from './new-beer/new-beer.component';
-import { BeerPourComponent } from './beer-pour/beer-pour.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +15,6 @@ import { BeerPourComponent } from './beer-pour/beer-pour.component';
     EditBeerComponent,
     BeerListComponent,
     NewBeerComponent,
-    BeerPourComponent
   ],
   imports: [
     BrowserModule,

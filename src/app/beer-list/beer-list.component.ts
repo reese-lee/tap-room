@@ -23,10 +23,10 @@ export class BeerListComponent {
   }
 
   abvColor(currentBeer){
-    if (currentBeer.abv > 5){
-      return "bg-warning";
-    } else if (currentBeer.abv > 7) {
+    if (currentBeer.abv > 7) {
       return  "bg-danger";
+    } else if (currentBeer.abv > 5){
+      return "bg-warning";
     } else {
       return "bg-info";
     }
