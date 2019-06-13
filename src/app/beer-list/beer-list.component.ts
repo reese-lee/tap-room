@@ -16,7 +16,7 @@ export class BeerListComponent {
     this.clickSender.emit(beerToEdit);
   }
 
-  ratingColor(currentBeer){
+  abvColor(currentBeer){
     if (currentBeer.abv > 5){
       return "bg-warning";
     } else if (currentBeer.abv > 7) {
@@ -26,11 +26,11 @@ export class BeerListComponent {
     }
   }
 
-  filterByLevels: string = "lowLevelBeers";
-
-  onChange(optionFromMenu) {
-    this.filterByLevels = optionFromMenu;
-  }
+  // filterByLevels: string = "lowLevelBeers";
+  //
+  // onChange(optionFromMenu) {
+  //   this.filterByLevels = optionFromMenu;
+  // }
 
   // toggleDone(clickedBeer: Beer, setLevels: boolean) {
   //   clickedBeer.pintsRemaining = setLevels;

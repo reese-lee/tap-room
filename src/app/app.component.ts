@@ -13,6 +13,7 @@ export class AppComponent {
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
+  selectedBeer = null;
 
   masterBeerList: Beer[] = [
     new Beer('Porter Brewing', 'Irish Red Ale', 5, 5.0, 'slightly sweet with a hint of caramel, lightly hopped and finishes clean and smooth'),
@@ -23,15 +24,15 @@ export class AppComponent {
     new Beer('Modern Times', 'Black House', 5, 5.8, 'Oatmeal Coffee'),
   ]
 
-  //   editRecipe(recipeToEdit) {
-  //   this.selectedRecipe = recipeToEdit;
-  // }
-  //
-  // finishedEditing() {
-  //   this.selectedRecipe = null;
-  // }
-  //
-  // addRecipe(newRecipe: Recipe) {
-  // this.masterRecipeList.push(newRecipe);
-  // }
+    editBeer(beerToEdit) {
+    this.selectedBeer = beerToEdit;
+  }
+
+  finishedEditing() {
+    this.selectedBeer = null;
+  }
+  
+  addBeer(newBeer: Beer) {
+  this.masterBeerList.push(newBeer);
+  }
 }
