@@ -36,8 +36,11 @@ export class AppComponent {
   }
 
   pourCompleted(beerToPour) {
-    console.log("pints??")
-    beerToPour.pintsRemaining--;
+    if(beerToPour.pintsRemaining >= 1){
+      beerToPour.pintsRemaining--;
+    } else {
+      alert("out of beer");
+    }
   }
 
 }
