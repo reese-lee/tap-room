@@ -18,7 +18,6 @@ export class BeerListComponent {
   }
 
   pourButtonClicked(beerToPour: Beer) {
-    console.log("over here?")
     this.clickSender2.emit(beerToPour);
   }
 
@@ -32,13 +31,17 @@ export class BeerListComponent {
     }
   }
 
-  // filterByLevels: string = "lowLevelBeers";
-  //
-  // onChange(optionFromMenu) {
-  //   this.filterByLevels = optionFromMenu;
-  // }
+  filterByLevels: string = "lowLevelBeers";
 
-  // toggleDone(clickedBeer: Beer, setLevels: boolean) {
-  //   clickedBeer.pintsRemaining = setLevels;
-  // }
+  onChange(optionFromMenu) {
+    this.filterByLevels = optionFromMenu;
+  }
+
+  toggleDone(clickedBeer: Beer, setLevels: boolean) {
+    if (clickedBeer.pintsRemaining <= 10) {
+      setLevels === true;
+    } if (clickedBeer.pintsRemaining === 0) {
+      clickedBeer.pintsRemaining = null;
+    }
+  }
 }

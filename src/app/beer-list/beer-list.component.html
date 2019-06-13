@@ -14,8 +14,8 @@
 
 <ul>
   <li [class]="abvColor(currentBeer)" *ngFor="let currentBeer of childBeerList">{{currentBeer.brand}}<br>{{currentBeer.name}}<br>${{currentBeer.price}}<br>{{currentBeer.abv}}% <br>{{currentBeer.flavorNotes}}<br>{{currentBeer.pintsRemaining}}<br>
-    <!-- <input *ngIf="currentBeer.pintsRemaining <=10" type="checkbox" checked (click)="toggleDone(currentBeer, false)"/>
-    <input *ngIf="currentBeer.pintsRemaining >10" type="checkbox" (click)="toggleDone(currentBeer, true)"/> -->
+    <input *ngIf="currentBeer.pintsRemaining <=10" type="checkbox" checked (click)="toggleDone(currentBeer, false)"/>
+    <input *ngIf="currentBeer.pintsRemaining >10" (click)="toggleDone(currentBeer, true)"/>
     <button (click)="pourButtonClicked(currentBeer)">Pour</button>
     <button (click)="editButtonClicked(currentBeer)">Edit!</button></li>
   </ul>
