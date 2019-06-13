@@ -1,3 +1,22 @@
-<p>
-  edit-beer works!
-</p>
+<div *ngIf="childSelectedBeer">
+  <h3>{{childSelectedBeer.title}}</h3>
+  <p>Beer Low? {{childSelectedBeer.pintsRemaining}}</p>
+  <h3>Edit Beer</h3>
+  <label>Enter Brand:</label>
+  <input [(ngModel)]="childSelectedBeer.brand">
+  <br>
+  <label>Enter Name:</label>
+  <input [(ngModel)]="childSelectedBeer.name">
+  <br>
+  <label>Enter Price:</label>
+  <input [(ngModel)]="childSelectedBeer.price">
+  <br>
+  <br>
+  <label>Enter Alcohol Content:</label>
+  <input [(ngModel)]="childSelectedBeer.abv">
+  <br>
+  <br>
+  <label>Enter Notes on Flavor:</label>
+  <input [(ngModel)]="childSelectedBeer.flavorNotes">
+  <br>
+</div>
